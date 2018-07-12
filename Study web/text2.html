@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    window.onload= function (){
+      var A = document.getElementById('A');
+
+      var B = document.getElementById('B');
+      A.onkeyup = function(){
+            var ketqua = document.getElementById('ketqua');
+          ketqua.innerHTML = parseInt(A.value) + parseInt(B.value);
+      }
+      B.onkeyup = function(){
+        var ketqua=document.getElementById('ketqua');
+        ketqua.innerHTML = parseInt(A.value) + parseInt(B.value);
+      }
+
+
+    }
+
+
+    </script>
+  </head>
+  <body>
+    <input id="A" type="text" value="0">
+    <input id="B" type="text" name="" value="0">
+    <p>Ket qua:</p>
+    <p id="ketqua">0</p>
+  </body>
+</html>

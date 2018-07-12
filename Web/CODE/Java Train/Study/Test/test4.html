@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        window.onload = function () {
+            var checkbox1 = document.getElementById("quantay");
+            var checkbox2 = document.getElementById("somi");
+            var slquantay = document.getElementById("slQuanTay");
+            var slSomi = document.getElementById("slSomi");
+            var price = document.getElementById("price");
+
+            slquantay.onkeyup = function (ev) {
+                if(checkbox1.checked){
+                    if(checkbox2.checked){
+                        price.innerHTML = (slquantay.value*50) + (slSomi.value*100);
+                    }else{
+                        price.innerHTML = (slquantay.value*50);
+                    }
+                }
+            };
+            slSomi.onkeyup = function (ev) {
+                if(checkbox2.checked){
+                    if(checkbox1.checked){
+                        price.innerHTML = (slquantay.value*50) + (slSomi.value*100);
+                    }else{
+                        price.innerHTML = (slSomi.value*100);
+                    }
+                }
+
+            };
+            checkbox1.onclick = function (ev) {
+              if (checkbox1.checked){
+                  if(checkbox2.checked){
+                      price.innerHTML = (slquantay.value*50) + (slSomi.value*100);
+
+                  }else{
+                      price.innerHTML = (slquantay.value*50);
+                  }
+              } else{
+                  price.innerHTML = (parseInt(price.innerHTML) - slquantay.value*50);
+              }
+            };
+            checkbox2.onclick = function (ev) {
+                if (checkbox2.checked){
+                    if(checkbox1.checked){
+                        price.innerHTML = (slquantay.value*50) + (slSomi.value*100);
+
+                    }else{
+                        price.innerHTML = (slSomi.value*100);
+                    }
+
+                } else{
+                    price.innerHTML = (parseInt(price.innerHTML) - slSomi.value*100);
+
+                }
+            };
+
+            mua.onclick = function (ev) {
+                if (checkbox1.checked && slquantay.value !="" && slquantay.value !=0){
+                    price.innerHTML= slquantay.value*50;
+                }else
+                if (!checkbox1.checked || slquantay.value !="" || slquantay.value !=0){
+                    alert("Vui lòng chọn mặt hàng!")
+                }else
+
+
+                if (!checkbox2.checked || slquantay.value !="" || slquantay.value !=0){
+                    alert("Vui lòng chọn mặt hàng!");
+                }else
+                if (!checkbox2.checked || slSomi.value !="" || slSomi.value !=0) {
+                    alert("Vui lòng chọn mặt hàng!")
+                }else
+
+
+                if (!checkbox1.checked || slSomi.value !="" || slSomi.value !=0) {
+                    alert("Vui lòng chọn mặt hàng!")
+                }else
+                if (checkbox2.checked && slquantay.value !="" && slquantay.value !=0) {
+                    price.innerHTML = slSomi.value * 100;
+                }else
+                    if(checkbox1.checked || slSomi.value ="" || slSomi.value =0){
+                    alert("Vui lòng nhập số lượng")
+                    }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+
+<input type="checkbox" id="quantay">Quần Tây | Số lượng: <input type="number" id="slQuanTay"
+                                                                placeholder="Số lượng quần tây"><br><br>
+<input type="checkbox" id="somi">Sơ mi | Số lượng: <input type="number" id="slSomi" placeholder="Số lượng áo sơ mi">
+
+
+<hr>
+Tổng giá: <h3 id="price">0</h3>
+<hr>
+
+<button id="mua">Mua</button>
+<hr>
+<div style="border: 2px solid green; width: 200px">
+    <p>Đơn giá:</p>
+    <p>Quần tây giá 50/cái</p>
+    <p>Sơ mi giá 100/cái</p></div>
+    <p>Yêu cầu:</p>
+    <p>- Nếu đã chọn đồ muốn mua và đã ghi số lượng thì phải tính giá theo bảng giá</p>
+<p>- Nếu nhấn mua hàng trong khi chưa chọn món hàng hoặc đã chọn món hàng mà không ghi số lượng thì thông báo lỗi (lỗi ghi gì kệ m)</p>
+<p>- Nếu ghi số lượng mà không stick chọn </p>
+</body>
+</html>

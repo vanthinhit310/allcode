@@ -1,0 +1,205 @@
+<%@page import="model.ThongTinDT"%>
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.ThemDienThoai"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <title>bài tập lab4</title> 
+ 	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Boot/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <style type="text/css">
+     .colors{
+     margin-left: 100px;
+     padding-right: 100px;
+     }
+     </style>
+</head>
+ <body>
+        <div data-role="page" id="main-page">
+            
+
+<header>
+<center><h1>Bài Tập Lab 4</h1></center>
+    
+</header>
+            
+
+<div id="sticky-search-bar" class=" clearfix mb-15" style="height:41px;">
+</div>
+<div>
+    <!--Title product-->
+    <div class="title_product">
+        <input type="hidden" id="hdCategoryId" value="152535" />
+
+    </div>
+    <!--End Title product-->
+    <!--Take 2 first-->
+    <div id="main-content">
+        <section class="products">
+            <div class="container">
+                <div class="shop clearfix shop-masonry" id="cateProductContent">
+                    <div class="masonry-sizer"></div>
+                            <div class="masonry-item">
+
+
+
+ <%ThemDienThoai t=new ThemDienThoai();
+ ArrayList<ThongTinDT>array=t.all;
+ DecimalFormat d=new DecimalFormat("###,###,###");
+  
+for(int i=0;i<array.size();i++){ %>
+<div class="product">
+            <div class="giasv_icon">
+                <span class="indicator-product-status1 right-bottom-tragop">right-bottom-tragop</span>
+            </div>
+
+            <div class="product-overlay animate" itemscope itemtype="http://schema.org/Product" title="iPhone 7 Plus 128GB Jet Black">
+            <a href="/iphone-7-plus-128gb-jet-black.html" class="product-link" title="iPhone 7 Plus 128GB Jet Black"></a>
+            <h3 class="name" itemprop="name"><strong>Tên điện thoại:</strong><%out.print(array.get(i).getTenDT());%></h3>
+                    <div class="overlay-price"><strong>Giá:</strong><%out.print(d.format(array.get(i).getGiaSP())+"đ");%></div>
+                    <div><strong>Màn hình:</strong><%out.print(array.get(i).getManHinh());%></div><br>
+                    <div><strong>HĐH:</strong><%out.print(array.get(i).getHeDH());%></div>
+                    <div><strong>CPU:</strong><%out.print(array.get(i).getTocdoCPU());%></div>
+                    <div><strong>Ram:</strong><%out.print(array.get(i).getRam());%>;<strong>Rom:</strong><%out.print(array.get(i).getBnTrong());%></div>
+                    <div><strong>Camera:</strong><%out.print(array.get(i).getCameraTruoc());%>;<strong>Selfie:</strong><%out.print(array.get(i).getSelfie());%></div>
+                    <div><strong>Pin:</strong><%out.print(array.get(i).getDlPin());%>,<strong>Sim:</strong><%out.print(array.get(i).getSim());%></div>
+
+
+            <div class="product-config">
+                    <a href="#" title="Mua ngay" class="btn-cart">
+                        <i class="vta-cart"></i><span>Mua ngay</span>
+                    </a>
+                <ul class="btn-group-compare list-inline">
+                    <li><a href="#"><i class="vta-heart"></i></a></li>
+                    <li><a href="#"><i class="vta-compare"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="product-image">
+            <a href="" title="iPhone 7 Plus 128GB Jet Black">
+                <figure data-feedback="fb:likes, fb:comments">
+                    <img class="lazy" src="<%out.print(array.get(i).getHinhAnhSP());%>">
+                </figure>
+            </a>
+        </div>
+
+
+
+
+
+
+        <div class="product-name">
+            <div class="name">
+                <strong>Tên điện thoại:</strong><%out.print(array.get(i).getTenDT());%>
+            </div>
+            <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+     
+                        <div class="price-1" itemprop="price">
+                           <strong>Giá:</strong> <%out.print(d.format(array.get(i).getGiaSP())+"đ");%>
+                        </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="product-sale ">
+            <div class="clearfix">
+                                                    <div class="pull-left">
+                        <i class="vta-gift"></i>
+                    </div>
+                    <div class="product-sale-text">
+                        <span>Mua online giảm:</span>
+                        <span> 1,200,000đ</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+                            </div>
+                            <div class="masonry-item">
+<%} %>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div style="text-align: center;">
+            <div class="loader loader-config" style="display: none;">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+        </div>
+            <div class="load-more text-center animate" id="CategoryPager" cateid="152535" page="2">
+                <button title="Xem thêm" class="btn-cart">
+                    <i class="vta-plus"></i>Xem thêm
+                </button>
+            </div>
+
+    </div>
+</div>
+<div class="colors">
+    <div><h3 style="text-align: center">Danh Sách Sản Phẩm</h3></div>
+<div>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Hình ảnh</th>
+        <th>Giá ban đầu</th>
+        <th>Giá đã giảm</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <%ThemDienThoai tt=new ThemDienThoai();
+    ArrayList<ThongTinDT>list=tt.all;
+    for(int i=0;i<list.size();i++){
+    	String x=i+"";
+    %>
+    <tbody>
+      <tr>
+        <td><%out.print(list.get(i).getMaDT());%></td>
+        <td><%out.print(list.get(i).getTenDT());%></td>
+        <td style="padding:20px 20px 20px 50px"><img src="<%out.print(list.get(i).getHinhAnhSP());%>" width="50px" height="50px"></td>
+        <td><%out.print(d.format(list.get(i).getGiaBanDau())+"đ");%></td>
+        <td><%out.print(d.format(list.get(i).getGiaDaGiam())+"đ");%></td>
+        <td><a href="#" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-trash"></span> Xóa
+        </a></td>
+      </tr>
+    </tbody>
+    <%} %>
+  </table>
+</div>
+</div>    
+
+<footer id="footerVta">
+
+</footer>
+    
+
+    
+</div>
+<!-- Go To Top
+    ============================================= -->
+<div id="gotoTop" class="vta-arrow-up"></div>
+
+
+    </body>
+</html>

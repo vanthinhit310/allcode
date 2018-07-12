@@ -1,0 +1,72 @@
+
+Mar 16, 2018 01:36:34.20 NEW SESSION
+Mar 16, 2018 01:36:34.20 [12928:16072:0316/013631.560:ERROR:in_progress_cache_impl.cc(93)] Could not read download entries from file because there was a read failure.
+Mar 16, 2018 02:13:52.32 [12928:20448:0316/021352.324:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:13:52.49 [12928:20448:0316/021352.491:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:13:52.68 [12928:20448:0316/021352.682:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:13:53.05 [12928:20448:0316/021353.054:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:17:02.24 [12928:20448:0316/021702.246:ERROR:extension_protocols.cc(553)] Allowing load of chrome-extension://pgjjikdiikihdfpoppgaidccahalehjh/webspeed.js.mapfrom unknown origin. Could not find user data for request.
+Mar 16, 2018 02:20:22.56 [12928:20448:0316/022022.567:ERROR:extension_protocols.cc(553)] Allowing load of chrome-extension://pgjjikdiikihdfpoppgaidccahalehjh/webspeed.js.mapfrom unknown origin. Could not find user data for request.
+Mar 16, 2018 02:22:01.34 [12928:20448:0316/022201.341:ERROR:connection_factory_impl.cc(379)] Failed to connect to MCS endpoint with error -106
+Mar 16, 2018 02:25:09.69 [12928:20448:0316/022509.697:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:25:10.11 [12928:20448:0316/022510.112:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:25:10.44 [12928:20448:0316/022510.444:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:25:10.90 [12928:20448:0316/022510.899:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:26:19.00 [12928:20448:0316/022619.002:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:46:11.29 [12928:20448:0316/024611.290:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:46:11.58 [12928:20448:0316/024611.585:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:46:11.99 [12928:20448:0316/024611.997:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:46:17.40 [12928:20448:0316/024617.403:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:48:09.41 [12928:20448:0316/024809.413:ERROR:ssl_client_socket_impl.cc(1147)] handshake failed; returned -1, SSL error code 1, net_error -101
+Mar 16, 2018 02:49:59.49 [12928:20448:0316/024959.491:ERROR:extension_protocols.cc(553)] Allowing load of chrome-extension://pgjjikdiikihdfpoppgaidccahalehjh/webspeed.js.mapfrom unknown origin. Could not find user data for request.
+Mar 16, 2018 02:53:18.19 [12928:20448:0316/025318.191:ERROR:extension_protocols.cc(553)] Allowing load of chrome-extension://pgjjikdiikihdfpoppgaidccahalehjh/webspeed.js.mapfrom unknown origin. Could not find user data for request.
+Mar 16, 2018 02:53:20.00 [12928:20448:0316/025320.006:ERROR:extension_protocols.cc(553)] Allowing load of chrome-extension://pgjjikdiikihdfpoppgaidccahalehjh/webspeed.js.mapfrom unknown origin. Could not find user data for request.
+Mar 16, 2018 02:59:55.35 [12928:20448:0316/025955.350:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:59:55.50 [12928:20448:0316/025955.506:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:59:55.79 [12928:20448:0316/025955.794:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 02:59:56.13 [12928:20448:0316/025956.130:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:07:12.50 [12928:20448:0316/030712.504:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:07:12.58 [12928:20448:0316/030712.587:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:07:12.66 [12928:20448:0316/030712.666:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:07:13.08 [12928:20448:0316/030713.080:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:11:55.28 [12928:20448:0316/031155.282:ERROR:extension_protocols.cc(553)] Allowing load of chrome-extension://pgjjikdiikihdfpoppgaidccahalehjh/webspeed.js.mapfrom unknown origin. Could not find user data for request.
+Mar 16, 2018 03:13:07.69 [12928:20448:0316/031307.690:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:13:07.92 [12928:20448:0316/031307.921:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:13:08.02 [12928:20448:0316/031308.022:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:13:08.41 [12928:20448:0316/031308.412:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:13:29.54 [12928:20448:0316/031329.543:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:13:29.67 [12928:20448:0316/031329.671:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:13:29.68 [12928:20448:0316/031329.687:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:13:30.09 [12928:20448:0316/031330.092:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:31:43.30 [12928:20448:0316/033143.305:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:31:43.38 [12928:20448:0316/033143.384:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:31:44.38 [12928:20448:0316/033144.382:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:31:44.85 [12928:20448:0316/033144.853:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:32:07.93 [12928:20448:0316/033207.930:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:37:52.48 [12928:20448:0316/033752.488:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:37:52.63 [12928:20448:0316/033752.632:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:37:52.69 [12928:20448:0316/033752.696:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:37:53.09 [12928:20448:0316/033753.088:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:38:03.56 [12928:20448:0316/033803.563:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:38:03.64 [12928:20448:0316/033803.648:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:38:03.71 [12928:20448:0316/033803.719:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+Mar 16, 2018 03:38:04.09 [12928:20448:0316/033804.089:ERROR:upload_data_presenter.cc(73)] NOT IMPLEMENTED
+
+Mar 19, 2018 12:40:09.15 NEW SESSION
+Mar 19, 2018 12:40:09.15 [9640:8812:0319/124009.002:ERROR:in_progress_cache_impl.cc(93)] Could not read download entries from file because there was a read failure.
+Mar 19, 2018 12:40:10.33 [9640:3016:0319/124010.338:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.39 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.40 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.40 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.40 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.40 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.40 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.40 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.40 [9640:3016:0319/124010.396:ERROR:in_progress_cache_impl.cc(189)] Cache is not initialized, cannot RetrieveEntry.
+Mar 19, 2018 12:40:10.42 [9640:1060:0319/124010.424:ERROR:connection_factory_impl.cc(379)] Failed to connect to MCS endpoint with error -106
+Mar 19, 2018 12:40:40.15 [9640:1060:0319/124040.153:ERROR:connection_factory_impl.cc(379)] Failed to connect to MCS endpoint with error -106
+Mar 19, 2018 12:40:44.93 [9640:3016:0319/124044.938:ERROR:account_tracker.cc(278)] OnGetTokenFailure: Connection failed (-106).
+Mar 19, 2018 12:40:44.93 [9640:3016:0319/124044.938:ERROR:account_tracker.cc(278)] OnGetTokenFailure: Connection failed (-106).
+
+Apr 10, 2018 02:42:51.42 NEW SESSION
+Apr 10, 2018 02:42:51.42 [3656:4144:0410/024251.418:ERROR:in_progress_cache_impl.cc(93)] Could not read download entries from file because there was a read failure.

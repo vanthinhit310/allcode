@@ -1,0 +1,125 @@
+package controller;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionContext;
+
+/**
+ * Servlet implementation class Lab3
+ */
+public class XuLyLab3 extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public XuLyLab3() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		HttpSession session=request.getSession();
+		boolean error=false;
+		String email=request.getParameter("email");
+		String hoten=request.getParameter("hovaten");
+		String sdt=request.getParameter("sdt");
+		String sdtdd=request.getParameter("sdtdd");
+		String mk=request.getParameter("matkhau");
+		String nhapmk=request.getParameter("nhaplaimk");
+		String diachi=request.getParameter("diachi");
+		String email_err="";
+		String hoten_err="";
+		String mk_err="";
+		String sdt_err1="";
+		String sdt_err2="";
+		String sdtdd_err="";
+		response.setContentType("text/html");
+		ServletContext context=getServletContext();
+		
+		context.setAttribute("matkhau", mk);
+		context.setAttribute("nhapmk", nhapmk);
+		context.setAttribute("email", email);
+		context.setAttribute("hoten", hoten);
+		context.setAttribute("sdt", sdt);
+		context.setAttribute("sdtdd", sdtdd);
+		context.setAttribute("diachi", diachi);
+		
+		
+		if (email == null || email.equals("")) {
+			email_err = "TrÆ°á»�ng email khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ trá»‘ng!";
+			error = true;
+			context.setAttribute("email_error", email_err);
+		}
+		
+		
+		if(hoten==null||hoten.equals("")){
+			hoten_err="TrÆ°á»�ng há»� vÃ  tÃªn khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ trá»‘ng!";
+			error = true;
+			context.setAttribute("hoten_error", hoten_err);
+		}
+	
+		
+	
+		if(!mk.equals(nhapmk)){
+			mk_err="Máº­t kháº©u nháº­p láº¡i pháº£i trÃ¹ng khá»›p vá»›i máº­t kháº©u vá»«a nháº­p";
+			error = true;
+			context.setAttribute("mk_error", mk_err);
+		}
+		
+		if(sdt==null||!(sdt.matches("-?\\d+(\\.\\d+)?"))||sdt.length()<10){
+			error=true;
+			if(sdt==null||sdt==""){
+				sdt_err1="TrÆ°á»�ng sá»‘ Ä‘iá»‡n thoáº¡i cá»§a báº¡n khÃ´ng Ä‘Æ°á»£c bá»� trá»‘ng!";
+				context.setAttribute("sdt_error1", sdt_err1);
+			}else if((!(sdt.matches("-?\\d+(\\.\\d+)?")))||sdt.length()<10){
+				sdt_err2="Sá»‘ Ä‘iá»‡n thoáº¡i báº¡n nháº­p pháº£i lÃ  sá»‘ vÃ  chiá»�u dÃ i lá»›n hÆ¡n hoáº·c báº±ng 10!";
+				context.setAttribute("sdt_error2", sdt_err2);
+			}
+		}
+			
+		if(sdtdd.length()!=0){
+			if(!(sdtdd.matches("-?\\d+(\\.\\d+)?"))||sdtdd.length()<10){
+				error=true;
+				sdtdd_err="Sá»‘ Ä‘iá»‡n thoáº¡i báº¡n nháº­p pháº£i lÃ  sá»‘ vÃ  cÃ³ chiá»�u dÃ i lá»›n hÆ¡n hoáº·c báº±ng 10!";
+				context.setAttribute("sdtdd_error", sdtdd_err);
+			}			
+		}
+		
+		
+		
+		if (error) {
+			response.sendRedirect("dangky");
+	}else{
+		session.setAttribute("dangnhap",email);
+		response.sendRedirect("thongtintaikhoan");
+	}
+	}
+
+}

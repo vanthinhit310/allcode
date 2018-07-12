@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script>
+//kiem tra so nguyento
+
+// function isPrimeNumber(n) {
+//   if (n < 2) {
+//    return false;
+//   } else {
+//    var temp = Math.sqrt(n);
+//    for (var i = 2; i <= temp; i++) {
+//     if (n % i == 0) {
+//      return false;
+//     }
+//    }
+//   }
+//   return true;
+//  }
+// console.log(isPrimeNumber(5));
+
+
+
+//tong cac so tu 1 den // NOTE: de quy
+//
+// function Sum(value){
+//         if (value > 0){
+//           return value + Sum (value - 1);
+//         }else{
+//             return 1;
+//         }
+//     }
+// console.log(Sum(5));
+
+
+
+window.onload = function(){
+
+  var button = document.getElementById('btnLogin');
+  btnLogin.onclick = function(){
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    alert(username.value + password.value);
+  }
+}
+
+
+</script>
+
+  </head>
+  <body>
+    <h1>Web study</h1>
+    <input id ="username" type="text" value="Username"></input>
+    <input id ="password" type="password" value="Password"></input>
+    <button id="btnLogin" type="button">DK</button>
+
+
+
+
+  </body>
+</html>

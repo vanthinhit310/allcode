@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    window.onload = function(){
+      var text= document.getElementById('text');
+      var nut1= document.getElementById('1');
+      var nut2= document.getElementById('2');
+      var nut3= document.getElementById('3');
+      var nut4= document.getElementById('4');
+      var nut5= document.getElementById('5');
+      var nut6= document.getElementById('6');
+
+      nut1.onclick = function(){
+          text.style.border ="10px solid red";
+      }
+      nut2.onclick = function(){
+        text.style.display = "none";
+      }
+      nut3.onclick = function(){
+        text.style.display = "block";
+      }
+      nut4.onclick = function(){
+        text.style.color = "blue";
+      }
+      nut5.onclick = function(){
+        text.style.color = "red";
+      }
+      nut6.onclick = function(){
+        text.style.color = "yellow";
+      }
+
+    }
+    </script>
+
+  </head>
+  <body>
+
+    <p id="text" style ="font-size: 30px">Hien Thi</p>
+    <button id="1" type="button" name="button">Them khung</button>
+    <button id="2" type="button" name="button">Bien mat</button>
+    <button id="3" type="button" name="button">Hien ra</button>
+    <button id="4" type="button" name="button">Xanh</button>
+    <button id="5" type="button" name="button">Do</button>
+    <button id="6" type="button" name="button">Vang</button>
+
+  </body>
+</html>

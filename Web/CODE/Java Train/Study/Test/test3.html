@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function (ev) {
+            var text = document.getElementById("textdata");
+            var size = document.getElementById("size")
+            var button1 = document.getElementById("1");
+            var button2 = document.getElementById("2");
+            var button3 = document.getElementById("3");
+            var button4 = document.getElementById("4");
+            var button5 = document.getElementById("5");
+            var button6 = document.getElementById("6");
+
+            button1.onclick = function (ev1) {
+                text.style.border = "5px solid red";
+                text.style.width = "100px";
+            }
+            button2.onclick = function (ev1) {
+                text.style.display = "none";
+            }
+            button3.onclick = function (ev1) {
+                text.style.display = "block";
+            }
+            button4.onclick = function (ev1) {
+                text.style.color = "red";
+            }
+            button5.onclick = function (ev1) {
+                text.style.color = "blue";
+            }
+            button6.onclick = function (ev1) {
+                text.style.color = "yellow";
+            }
+            size.onchange = function (ev1) {
+                text.style.fontSize = size.value+ "px";
+            }
+        }
+    </script>
+
+</head>
+<div align="center">
+    <p id="textdata">Thịnh</p>
+    <button id="1">Thêm khung</button>
+    <button id="2">Biến mất</button>
+    <button id="3">Hiện ra</button>
+    <button id="4">Đỏ</button>
+    <button id="5">Xanh</button>
+    <button id="6">Vàng</button>
+<br>
+<br>
+<br>
+<br>
+    <input type="text" id="size" placeholder="Nhập size của text tại đây">
+</div>
+</body>
+</html>

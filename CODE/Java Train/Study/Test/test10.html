@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 10</title>
+    <script>
+        /*window.onload = function (ev) {
+            var link = document.getElementById();
+            
+        }*/
+        function resure() {
+            question = confirm("Bạn chắc rằng mình muốn truy cập vào liên kết?");
+            if (question != "0") {
+                top.location = "http://youtube.com";
+            }
+        }
+    </script>
+</head>
+<body>
+<p>Giá trị return ở đây xác nhận cho việc truy cập vào website có được cho phép hay không
+nếu return = true thì truy cập không xác định
+nếu return = false thì cho phép truy cập vào youtube.com</p>
+<a id="1" style="font-size: 50px" href="youtube.com"
+   onclick="resure(); return false;">Lê Văn
+    Thịnh Website</a>
+</body>
+</html>

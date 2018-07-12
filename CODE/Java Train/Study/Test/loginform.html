@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Lab 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"
+          content="Client Signup Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <!--<script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>-->
+    <!-- Custom Theme files -->
+    <link href="../css/login.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <link href="//fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--web font-->
+    <!-- //web font -->
+
+    <!--bắt lỗi form!-->
+    <script>
+            function validateForm() {
+                // Bước 1: Lấy giá trị của username và password
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('pw').value;
+
+                // Bước 2: Kiểm tra dữ liệu hợp lệ hay không
+                if (username == '') {
+                    alert('Bạn chưa nhập tên đăng nhập');
+                    return false;
+                }
+                else if (password == '') {
+                    alert('Bạn chưa nhập mật khẩu');
+                    return false;
+                }
+                return true;
+            }
+    </script>
+</head>
+<body>
+<!-- main -->
+<div class="main main-agileits">
+    <h1>Register Form</h1>
+    <div class="main-agilerow">
+        <div class="signup-wthreetop">
+            <h2 style="text-align: center">Welcome to me!</h2>
+            <p style="text-align: center" id="p-text">Vui lòng điền thông tin vào mẫu dưới đây! </p>
+        </div>
+        <div class="contact-wthree">
+            <form id="formx" action="#" method="post" onsubmit="return(validateForm())">
+                <h3>Bước 1 :</h3>
+                <div class="form-w3step1">
+                    <input type="text" name="Name" placeholder="Tên của bạn" required="">
+                    <input type="email" class="email agileits-btm" name="Email" placeholder="Email" required="">
+                </div>
+                <h3>Bước 2 :</h3>
+                <div class="form-w3step1">
+                    <input id="username" type="text" name="User Name" placeholder="Tên đăng nhập" required="">
+                    <input id="pw" type="password" name="Password" placeholder="Mật khẩu" required="">
+                    <input type="password" class="agileits-btm" name="confirm password" placeholder="Nhập lại mật khẩu"
+                           required="">
+                </div>
+                <h3>Bước 3 :</h3>
+                <div class="form-w3step1 w3ls-formrow">
+                    <input type="text" name="Number" placeholder="Số điện thoại" required="">
+                    <input type="text" class="agileits-btm" name="Your Address" placeholder="Địa chỉ của bạn"
+                           required="">
+                </div>
+                <div class="agileits-row2 w3ls-formrow2">
+                    <input type="checkbox" id="brand2" value="">
+                    <label for="brand2"><span></span>Tôi đồng ý với điều khoản sử dụng</label>
+                </div>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //main -->
+<!-- copyright -->
+<div class="w3copyright-agile">
+    <p>© 2018 Register Form. All rights reserved | Design by <a href="https://www.facebook.com/vanthinh.le.50364"
+                                                                target="_blank">Văn Thịnh</a>
+    </p>
+</div>
+<!-- //copyright -->
+</body>
+</html>

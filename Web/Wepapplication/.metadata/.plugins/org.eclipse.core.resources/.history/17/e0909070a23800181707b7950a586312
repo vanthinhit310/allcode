@@ -1,0 +1,48 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import model.DataBaseConnection;
+import model.ThongTinNV;
+
+public class ThemNVDao {
+	public ArrayList<ThongTinNV>array=new ArrayList<>();
+	public ArrayList<ThongTinNV>array1=new ArrayList<>();
+	Connection conn;
+	ResultSet rs;
+	Statement stmt;
+	public ThemNVDao() {
+		super();
+	}
+	public void ThemNVList(){
+		if(array.size()==0){
+			ThongTinNV t1=new ThongTinNV("1", "NV0001","Trần Thị Thanh Nga","1/5/1982","Thái Bình",300000);
+			ThongTinNV t2=new ThongTinNV("1", "NV0002","Nguyễn Văn An","7/4/1980","Thái Bình",250000);
+			ThongTinNV t3=new ThongTinNV("1", "NV0003","Đào Thị Mơ","4/9/1983","Thái Bình",250000);
+			ThongTinNV t4=new ThongTinNV("1", "NV0004","Trạch Văn Đoành","4/7/1988","Thái Bình",300000);
+			ThongTinNV t5=new ThongTinNV("1", "NV0005","Mai văn Anh","11/8/1989","Thái Bình",220000);
+			array.add(t1);array.add(t2);array.add(t3);array.add(t4);array.add(t5);			
+		}
+	}
+	public void themNVDB(){
+		if(array1.size()==0){
+			conn=DataBaseConnection.getConnection();
+			String sql="select * from NhanVien";
+			try {
+				stmt=conn.createStatement();
+				rs=stmt.executeQuery(sql);
+				while(rs.next()){
+					ThongTinNV tt=new ThongTinNV(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6));
+					array1.add(tt);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

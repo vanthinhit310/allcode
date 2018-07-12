@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function (ev) {
+            select1=document.getElementById("1");
+            select2=document.getElementById("5");
+            var arr=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+            select1.onchange=function (ev1) {
+                select2.options.length=0;
+                if (select1.value == '2'){
+                    var m2= het2(arr);
+                    m2.forEach(function (value) {
+                    var option =document.createElement('option');
+                    option.value=value;
+                    option.innerHTML=value;
+                    select2.appendChild(option);
+                    })
+                }
+                if (select1.value == '3'){
+                    var m3= het3(arr);
+                    m3.forEach(function (value) {
+                        var option =document.createElement('option');
+                        option.value=value;
+                        option.innerHTML=value;
+                        select2.appendChild(option);
+                    })
+                }
+                if (select1.value == '4'){
+                    var m4= het4(arr);
+                    m4.forEach(function (value) {
+                        var option =document.createElement('option');
+                        option.value=value;
+                        option.innerHTML=value;
+                        select2.appendChild(option);
+                    })
+                }
+
+            }
+        }
+        function het2(arr) {
+            var tow=[];
+            arr.forEach(function (value,index) {
+                if (value %2 ==0){
+                    tow.push(value);
+                }
+            })
+            return tow;
+        }
+        function het3(arr) {
+            var three=[];
+            arr.forEach(function (value,index) {
+                if (value %3 ==0){
+                    three.push(value);
+                }
+            })
+            return three;
+        }
+        function het4(arr) {
+            var four=[];
+            arr.forEach(function (value,index) {
+                if (value %4 ==0){
+                    four.push(value);
+                }
+            })
+            return four;
+        }
+    </script>
+</head>
+<body>
+<select name="" id="1">
+    <option value="2">Chia hết cho 2</option>
+    <option value="3">Chia hết cho 3</option>
+    <option value="4">Chia hết cho 4</option>
+</select>
+<select id="5">
+
+</select>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+
+        //may tinh
+        window.onload = function (ev) {
+            var A = document.getElementById("A");
+            var B = document.getElementById("B");
+            var kq = document.getElementById("kq");
+            var cong = document.getElementById("1");
+            var tru = document.getElementById("2");
+            var nhan = document.getElementById("3");
+            var chia = document.getElementById("4");
+            var btnLogin = document.getElementById("btnLogin");
+            btnLogin.onclick = function (ev1) {
+
+
+                if (cong.checked) {
+                    kq.innerHTML = (parseInt(A.value) + parseInt(B.value));
+                }
+                if (tru.checked) {
+                    kq.innerHTML = (parseInt(A.value) - parseInt(B.value));
+                }
+                if (nhan.checked) {
+                    kq.innerHTML = (parseInt(A.value) * parseInt(B.value));
+                }
+                if (chia.checked) {
+                    kq.innerHTML = (parseInt(A.value) / parseInt(B.value));
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="A" placeholder="Nhập số A">
+<input type="text" id="B" placeholder="Nhập số B">
+<br>
+<input type="radio" name="pheptinh" value="+" id="1">Cộng
+<input type="radio" name="pheptinh" value="-" id="2">Trừ
+<input type="radio" name="pheptinh" value="*" id="3">Nhân
+<input type="radio" name="pheptinh" value="/" id="4">Chia
+<br>
+<br>
+<button id="btnLogin">Tính</button>
+<p>Ket qua: </p>
+<p id="kq">0</p>
+</body>
+</html>

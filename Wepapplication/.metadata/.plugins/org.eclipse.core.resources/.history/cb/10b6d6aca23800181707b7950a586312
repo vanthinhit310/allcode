@@ -1,0 +1,66 @@
+package dao;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import model.DataBaseConnection;
+import model.ThongTinDT;
+
+public class ThemDienThoaiDao {
+	public static ArrayList<ThongTinDT>array=new ArrayList<>();
+	Connection conn;
+	ResultSet result=null;
+	Statement stmt=null;
+	public ThemDienThoaiDao() {
+		super();
+		conn=DataBaseConnection.getConnection();
+	}
+	public void themDT(){
+		conn=DataBaseConnection.getConnection();
+		array=new ArrayList<>();
+			String sql="select t.MaSanPham,t.TenSanPham,t.GiaSanPham,t.ManHinhRong,t.CongNgheManHinh,t.HeDieuHanh,t.TocDoCPU,t.CameraTruoc,t.Selfie,t.DungLuongPin,t.Sim,t.Rom,t.Ram,t.HinhAnhSanPham,t.GiaSanPham from ThongTinSanPham t";
+				try {
+					stmt=conn.createStatement();
+					result=stmt.executeQuery(sql);
+					while(result.next()){
+						ThongTinDT tt=new ThongTinDT(result.getString(1), result.getString(2), result.getDouble(3), result.getString(4), result.getString(5), result.getString(6), result.getString(7),result.getString(8), result.getString(9), result.getString(10), result.getString(11), result.getString(12), result.getString(13), result.getString(14), result.getDouble(3),giamGia(20, result.getDouble(3)));
+						array.add(tt);
+					}
+				} catch (SQLException e) {
+					System.out.println("Lỗi");
+					e.printStackTrace();
+			}	
+	}
+	public static double giamGia(double phantram,double gia){
+		double result=gia*(1-((double)(phantram/100)));
+		return result;
+	}
+	public ArrayList<ThongTinDT> getArray() {
+		return array;
+	}
+	public void setArray(ArrayList<ThongTinDT> array) {
+		this.array = array;
+	}
+	public Connection getConn() {
+		return conn;
+	}
+	public void setConn(Connection conn) {
+		this.conn = conn;
+	}
+	public ResultSet getResult() {
+		return result;
+	}
+	public void setResult(ResultSet result) {
+		this.result = result;
+	}
+	public Statement getStmt() {
+		return stmt;
+	}
+	public void setStmt(Statement stmt) {
+		this.stmt = stmt;
+	}
+	
+	
+}

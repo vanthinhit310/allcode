@@ -1,0 +1,138 @@
+package controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.UserAddDao;
+import model.UserAdd;
+
+/**
+ * Servlet implementation class XuLyDangNhap
+ */
+@WebServlet("/XuLyDangKy")
+public class XuLyDangKy extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public XuLyDangKy() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html;charset=utf-8");
+		
+		
+		HttpSession session=request.getSession();
+		boolean error=false;
+		String email=request.getParameter("email");
+		String mk=request.getParameter("matkhau");
+		String hoten=request.getParameter("hovaten");
+		String gioitinh=request.getParameter("gioitinh");
+		String ngaysinh=request.getParameter("date");
+		String sdt=request.getParameter("sdt");
+		String sdtdd=request.getParameter("sdtdd");
+		String quocgia=request.getParameter("quocgia");
+		String tinhthanh=request.getParameter("tinhthanh");
+		String quanhuyen=request.getParameter("quan");
+		String diachi=request.getParameter("diachi");
+		String nhapmk=request.getParameter("nhaplaimk");
+		String email_err="";
+		String hoten_err="";
+		String mk_err="";
+		String sdt_err1="";
+		String sdt_err2="";
+		String sdtdd_err="";
+		response.setContentType("text/html");
+		ServletContext context=getServletContext();
+		
+		context.setAttribute("matkhau", mk);
+		context.setAttribute("nhapmk", nhapmk);
+		context.setAttribute("email", email);
+		context.setAttribute("hoten", hoten);
+		context.setAttribute("sdt", sdt);
+		context.setAttribute("sdtdd", sdtdd);
+		context.setAttribute("diachi", diachi);
+		
+		
+		if (email == null || email.equals("")) {
+			email_err = "Trường email không được để trống!";
+			error = true;
+			context.setAttribute("email_error", email_err);
+		}
+		
+		
+		if(hoten==null||hoten.equals("")){
+			hoten_err="Trường họ và tên không được để trống!";
+			error = true;
+			context.setAttribute("hoten_error", hoten_err);
+		}
+		
+		
+	
+		if(!mk.equals(nhapmk)){
+			mk_err="Mật khẩu nhập lại phải trùng khớp với mật khẩu vừa nhập";
+			error = true;
+			context.setAttribute("mk_error", mk_err);
+		}
+		
+		if(sdt==null||!(sdt.matches("-?\\d+(\\.\\d+)?"))||sdt.length()<10){
+			error=true;
+			if(sdt==null||sdt==""){
+				sdt_err1="Trường số điện thoại của bạn không được bỏ trống!";
+				context.setAttribute("sdt_error1", sdt_err1);
+			}else if((!(sdt.matches("-?\\d+(\\.\\d+)?")))||sdt.length()<10){
+				sdt_err2="Số điện thoại bạn nhập phải là số và chiều dài lớn hơn hoặc bằng 10!";
+				context.setAttribute("sdt_error2", sdt_err2);
+			}
+		}
+			
+		if(sdtdd.length()!=0){
+			if(!(sdtdd.matches("-?\\d+(\\.\\d+)?"))||sdtdd.length()<10){
+				error=true;
+				sdtdd_err="Số điện thoại bạn nhập phải là số và có chiều dài lớn hơn hoặc bằng 10!";
+				context.setAttribute("sdtdd_error", sdtdd_err);
+			}			
+		}
+		
+		
+		
+		if (error) {
+			response.sendRedirect("Lab5/dangkytk.jsp");
+	}else{
+		String gt="";
+		if(gioitinh.equals("Nam")){
+			gt="Nam";
+		}else if(gioitinh.equals("Nữ")){
+			gt="Nữ";
+		}
+		UserAdd user=new UserAdd(email, mk, hoten, gt, ngaysinh, sdt, sdtdd, quocgia, tinhthanh, quanhuyen, diachi);
+		new UserAddDao().addUser(user);
+		session.setAttribute("dangnhap",email);
+		response.sendRedirect("Lab5/dangkythanhcong.jsp");
+	}
+	}
+
+}

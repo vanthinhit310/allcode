@@ -1,0 +1,10 @@
+var today = new Date();
+var diff = 349260000;
+var diffDays = diff / (24 * 60 * 60 * 1000);
+var diffHours = diff / (60 * 60 * 1000) % 24;
+var diffMinutes = diff / (60 * 1000) % 60;
+var diffSeconds = diff / 1000 % 60;
+console.log(parseInt(diffDays));
+console.log(parseInt(diffHours));
+console.log(parseInt(diffMinutes));
+console.log(parseInt(diffSeconds));

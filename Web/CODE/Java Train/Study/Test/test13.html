@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function mailsome1() {
+            who=prompt("Vui lòng nhập Email người nhận", "Example@mail.com");
+            what=prompt("Tiêu đề","none");
+            if(confirm("Bạn muốn gửi Email đến "+ who+ "với tiêu đề: "+ what + "?" == true)){
+                parent.location.href ='mailto:'+who
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

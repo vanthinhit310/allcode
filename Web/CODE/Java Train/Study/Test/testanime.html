@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <script>
+        var img = null;
+        var animate;
+
+        function init() {
+            img = document.getElementById('myimg');
+            img.style.position = 'relative';
+            img.style.left = '0px';
+        }
+        
+        function moveRight() {
+            img.style.left = parseInt(img.style.left)+ 20 + 'px';
+            animate = setTimeout(moveRight,100);
+        }
+        
+        function stop() {
+            clearTimeout(animate);
+            img.style.left = '0px';
+        }
+        window.onload = init;
+    </script>
+
+    <style>
+        #myimg{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <img id="myimg" src="../images/1.jpg">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4>Click Start để  bắt đầu di chuyển!</h4>
+        <hr>
+        <input type="button" value="Start" onclick="moveRight();">
+        <input type="button" value="Stop" onclick="stop();">
+    </form>
+</body>
+</html>

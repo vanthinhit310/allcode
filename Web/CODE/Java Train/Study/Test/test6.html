@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (ev) {
+            var select1 = document.getElementById("1");
+            var select2 = document.getElementById("2");
+            var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+                , 14, 15, 16, 17, 18, 19, 20];
+
+            select1.onchange = function (ev1) {
+                select2.options.length = 0;
+                if (select1.value == 12) {
+                    var chiahetcho = chiahetcho2(arr);
+                    chiahetcho.forEach(function (value) {
+                        var option = document.createElement('option');
+                        option.value = value;
+                        option.innerHTML = value;
+                        select2.appendChild(option);
+                    });
+                }
+                if (select1.value == '22') {
+                    var chiahet = chiahetcho3(arr);
+                    chiahet.forEach(function (value) {
+                        var option = document.createElement('option');
+                        option.value = value;
+                        option.innerHTML = value;
+                        select2.appendChild(option);
+                    });
+                }
+                if (select1.value == '32') {
+                    var cho4 = chiahetcho4(arr);
+                    cho4.forEach(function (value) {
+                        var option = document.createElement('option');
+                        option.value = value;
+                        option.innerHTML = value;
+                        select2.appendChild(option);
+                    });
+                }
+            }
+
+
+            function chiahetcho2(arr) {
+                var chiahetcho2 = [];
+                arr.forEach(function (value, index) {
+                    if (value % 2 == 0) {
+                        chiahetcho2.push(value);
+                    }
+                });
+                return chiahetcho2;
+            }
+
+            function chiahetcho3(arr) {
+                var chiahetcho3 = [];
+                arr.forEach(function (value, index) {
+                    if (value % 3 == 0) {
+                        chiahetcho3.push(value);
+                    }
+                });
+                return chiahetcho3;
+            }
+
+            function chiahetcho4(arr) {
+                var chiahetcho4 = [];
+                arr.forEach(function (value, index) {
+                    if (value % 4 == 0) {
+                        chiahetcho4.push(value);
+                    }
+                });
+                return chiahetcho4;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<select name="" id="1">
+    <option value="12">Chia hết cho 2</option>
+    <option value="22">Chia hết cho 3</option>
+    <option value="32">Chia hết cho 4</option>
+</select>
+<select name="ketqua" id="2">
+
+</select>
+
+</body>
+</html>

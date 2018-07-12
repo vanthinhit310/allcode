@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 11</title>
+    <script>
+
+        function aplusb(form) {
+            a = eval(form.a.value);
+            b = eval(form.b.value);
+            c = a + b;
+            form.ans.value = c;
+            var ketqua = document.getElementById("kq");
+            ketqua.innerHTML = c;
+        }
+
+        function aminusb(form) {
+            a = eval(form.a.value);
+            b = eval(form.b.value);
+            c = a - b;
+            form.ans.value = c;
+            var ketqua = document.getElementById("kq");
+            ketqua.innerHTML = c;
+        }
+
+        function atimesb(form) {
+            a = eval(form.a.value);
+            b = eval(form.b.value);
+            c = a * b;
+            form.ans.value = c;
+            var ketqua = document.getElementById("kq");
+            ketqua.innerHTML = c;
+        }
+
+        function adivb(form) {
+            a = eval(form.a.value);
+            b = eval(form.b.value);
+            c = a / b;
+            form.ans.value = c;
+            var ketqua = document.getElementById("kq");
+            ketqua.innerHTML = c;
+        }
+
+        function apowb(form) {
+            a = eval(form.a.value);
+            b = eval(form.b.value);
+            c = Math.pow(a, b);
+            form.ans.value = c;
+            var ketqua = document.getElementById("kq");
+            ketqua.innerHTML = c;
+        }
+    </script>
+    <style>
+        #kq {
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<!--<form name="formx">
+    <p><input type="text" size="4" value="" name="a">
+        <input type="button" value=" + " onClick="aplusb(this.form)">
+        <input type="button" value=" - " onClick="aminusb(this.form)">
+        <input type="button" value=" x " onClick="atimesb(this.form)">
+        <input type="button" value=" / " onClick="adivb(this.form)">
+        <input type="button" value=" ^ " onClick="apowb(this.form)">
+        <input type="number" size="4" value="" name="b"> =
+        <input type=number" value="0" name="ans" size="9"> </p>
+</form>-->
+
+<h1 style="text-align: center">Máy Tính Điện Tử</h1>
+<form style="text-align: center" name="formx">
+    <p><input type="number" name="a" size="15" placeholder="Bạn hãy nhập số A" id="1">
+        <input type="button" value="Cộng" id="2" onclick="aplusb(this.form)">
+        <input type="button" value="Trừ" id="3" onclick="aminusb(this.form)">
+        <input type="button" value="Nhân" id="4" onclick="atimesb(this.form)">
+        <input type="button" value="Chia" id="5" onclick="adivb(this.form)">
+        <input type="button" value="Lũy thừa" id="6" onclick="apowb(this.form)">
+        <input type="number" name="b" size="15" placeholder="Bạn hãy nhập số B" id="7"> =
+        <input type="number" value="0" name="ans" size="15" id="8"></p>
+    <br>
+    <p style="text-align: center">Kết quả: </p>
+    <p id="kq" style="text-align: center">0</p>
+</form>
+</body>
+</html>

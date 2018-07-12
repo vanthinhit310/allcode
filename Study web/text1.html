@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    window.onload = function(){
+      var btnLogin=document.getElementById('btnLogin');
+
+      btnLogin.onclick = function(){
+        var SoA = document.getElementById('A');
+        var SoB = document.getElementById('B');
+        var select=document.getElementById('pheptinh');
+         if(select.value == "+"){
+           alert(parseInt(SoA.value) + parseInt(SoB.value));
+         }
+         if(select.value == "-"){
+           alert(parseInt(SoA.value) - parseInt(SoB.value));
+         }
+         if(select.value == "*"){
+           alert(parseInt(SoA.value) * parseInt(SoB.value));
+         }
+         if(select.value == "/"){
+           alert(parseInt(SoA.value) / parseInt(SoB.value));
+         }
+
+
+      }
+    }
+
+
+
+    </script>
+  </head>
+  <body>
+    <input id="A" type="text" placeholder="So A">
+    <select id="pheptinh" name="">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+
+    </select>
+    <input id = "B" type="text" placeholder="So B">
+    <button id="btnLogin" name="">Tinh</button>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-2.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#formx').on('submit', function () {
+                if ($('#1').val() === '') {
+                    $('#e1').html("Bạn phải nhập Username!");
+                    $('#1').css('border', 'solid 1px red');
+                    return false;
+                }
+                if ($('#2').val() === '') {
+                    $('#e2').html("Bạn phải nhập Password!");
+                    $('#2').css('border', 'solid 1px red');
+                    return false;
+                }
+
+                if ($('#3').val() === '') {
+                    $('#e3').html("Bạn phải nhập Tên!");
+                    $('#3').css('border', 'solid 1px red');
+                    return false;
+                }
+                if ($('#4').val() === '') {
+                    $('#e4').html("Bạn phải nhập Tuổi!");
+                    $('#4').css('border', 'solid 1px red');
+                    return false;
+                }
+                if ($('#5').val() === '') {
+                    $('#e5').html("Bạn phải nhập Ngày Sinh!");
+                    $('#5').css('border', 'solid 1px red');
+                    return false;
+                }
+
+            })
+
+
+            $('#formx').on('keyup', function () {
+                if ($('#1').val() !== '') {
+                    $('#e1').html('');
+                    $('#1').css('border', 'solid 2px green');
+                }
+                if ($('#2').val() !== '') {
+                    $('#e2').html('');
+                    $('#2').css('border', 'solid 2px green');
+                }
+
+                if ($('#3').val() !== '') {
+                    $('#e3').html('');
+                    $('#3').css('border', 'solid 2px green');
+                }
+                if ($('#4').val() !== '') {
+                    $('#e4').html('');
+                    $('#4').css('border', 'solid 2px green');
+                }
+                if ($('#5').val() !== '') {
+                    $('#e5').html('');
+                    $('#5').css('border', 'solid 2px green');
+                }
+
+            })
+        })
+    </script>
+
+</head>
+<body>
+<form id="formx">
+    <div>
+        <input id="1" type="text" name="Username" placeholder="Username">
+        <p id="e1" style="color: red"></p>
+    </div>
+
+    <div>
+        <input id="2" type="Password" name="Password" placeholder="Password">
+        <p id="e2" style="color: red"></p>
+    </div>
+
+    <div>
+        <input id="3" type="text" name="Ten" placeholder="Ten">
+        <p id="e3" style="color: red"></p>
+    </div>
+
+    <div>
+        <input id="4" type="text" name="Tuoi" placeholder="Tuoi">
+        <p id="e4" style="color: red"></p>
+    </div>
+
+    <div>
+        <input id="5" type="text" name="Ngay sinh" placeholder="Ngay Sinh">
+        <p id="e5" style="color: red"></p>
+    </div>
+    <input type="submit" value="OK">
+
+</form>
+</body>
+</html>

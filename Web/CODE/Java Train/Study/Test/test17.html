@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function (ev) {
+           var selecttinh=document.getElementById("tinh");
+           var selecthuyen=document.getElementById("huyen");
+           var huyentphcm=['Quận 1','Quận 2','Quận 3','Quận Tân Bình','Quận 12'];
+           var huyenhn=['Hoàn Kiếm','Thanh Xuân','Ba Vì','Tây Hồ','Cầu Giấy'];
+           var huyenbt=['Hàm Tân','Hàm Thuận Bắc','Hàm Thuận Nam','Tuy Phong','Bắc Bình'];
+
+           selecttinh.onchange=function (ev1) {
+               selecthuyen.options.length=0;
+               if (selecttinh.value == '1'){
+                   huyentphcm.forEach(function (value) {
+                       var option=document.createElement('option');
+                       option.value=value;
+                       option.innerHTML=value;
+                       selecthuyen.appendChild(option);
+                   })
+               }
+               if (selecttinh.value == '2'){
+                   huyenhn.forEach(function (value) {
+                       var option=document.createElement('option');
+                       option.value=value;
+                       option.innerHTML=value;
+                       selecthuyen.appendChild(option);
+                   })
+               }
+               if (selecttinh.value == '3'){
+                   huyenbt.forEach(function (value) {
+                       var option=document.createElement('option');
+                       option.value=value;
+                       option.innerHTML=value;
+                       selecthuyen.appendChild(option);
+                   })
+               }
+
+           }
+        }
+    </script>
+</head>
+<body>
+<select style="text-align: left" name="" id="tinh">
+    <option value="1">TP.HCM</option>
+    <option value="2">Hà Nội</option>
+    <option value="3">Bình Thuận</option>
+</select>
+
+<select style="text-align: right" name="" id="huyen"></select>
+
+</body>
+</html>

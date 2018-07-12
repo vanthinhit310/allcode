@@ -1,0 +1,43 @@
+package dao;
+
+import java.beans.Statement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import model.DataBaseConnection;
+import model.UserAdd;
+public class UserAddDao {
+private java.sql.Connection conn;
+private ResultSet rs=null;
+private Statement stmt=null;
+
+public UserAddDao() {
+	super();
+	conn=DataBaseConnection.getConnection();
+}
+public  void addUser(UserAdd user){
+	try {
+		String sql="insert into TaiKhoan values(?,?,?,?,?,?,?,?,?,?,?)";
+		PreparedStatement pre=conn.prepareStatement(sql);
+		pre.setString(1, user.getEmail());
+		pre.setString(2, user.getMatkhau());
+		pre.setString(3, user.getHoVaTen());
+		pre.setString(4, user.getGioiTinh());
+		pre.setString(5, user.getNgaySinh());
+		pre.setString(6, user.getSoDT());
+		pre.setString(7, user.getSoDTDD());
+		pre.setString(8, user.getQuocGia());
+		pre.setString(9, user.getTinhThanh());
+		pre.setString(10, user.getQuanHuyen());
+		pre.setString(11, user.getDiaChiNha());
+		pre.executeQuery();
+		System.out.println("add successfully");
+		
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+
+
+}

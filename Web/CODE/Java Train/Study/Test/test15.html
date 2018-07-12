@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    window.onload = function (ev) {
+        var select=document.getElementById("4");
+        var mang1=document.getElementById("1");
+        var mang2=document.getElementById("2");
+        var mang3=document.getElementById("3");
+        var ketqua=document.getElementById("kq");
+        arr1 =[1,2,3,4];
+        arr2 =[2,3,4,5];
+        arr3 =[3,4,5,6];
+
+        select.onchange =function (ev1) {
+            if(select.value == 1){
+                ketqua.innerText=tong(arr1);
+            }
+            if(select.value == 2){
+                ketqua.innerHTML='<b>'+tong(arr2)+'</b>';
+            }
+            if(select.value == 3){
+                ketqua.innerHTML=tong(arr3);
+            }
+        }
+
+        function tong(arr) {
+            var rs=0;
+            arr.forEach(function (value, index) {
+              rs+=value;
+            })
+            return rs;
+
+            }
+
+
+    }
+</script>
+<body>
+<select name="arr1" id="4">
+    <option value="1" id="1">Mảng 1</option>
+    <option value="2" id="2">Mảng 2</option>
+    <option value="3" id="3">Mảng 3</option>
+
+</select>
+
+<p>Kết qủa:</p>
+<p id="kq" style="font-size: 40px">0</p>
+
+</body>
+</html>

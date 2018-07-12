@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animate</title>
+
+    <script>
+        if (document.images) {
+            var images1 = new Image();
+            images1.src = "../images/5.jpg";
+
+            var images2 = new Image();
+            images2.src = "../images/6.jpg";
+        }
+    </script>
+
+</head>
+<body>
+
+<h1 style="text-align: center">Đưa chuột vào hình để thấy điều kì diệu!</h1>
+<br>
+<br>
+<hr>
+<div align="center">
+    <a href="#" onmouseover="document.myimg.src=images1.src;" onmouseout="document.myimg.src=images2.src;">
+
+        <img src="../images/6.jpg" name="myimg" border="2"></a>
+</div>
+</body>
+</html>

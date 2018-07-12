@@ -1,0 +1,65 @@
+package dao;
+
+import java.util.ArrayList;
+
+import model.ThongTinDT;
+
+public class ThemDienThoai {
+
+	public static ArrayList<ThongTinDT> all= getAll();
+	public ThemDienThoai() {
+		
+	}
+	
+	public static ArrayList<ThongTinDT> getAll(){
+		 ArrayList<ThongTinDT>all=new ArrayList<>();
+		double gia1=16990000;
+		double gia2=19990000;
+		double gia3=22900000;
+		double gia4=20899000;
+		double gia5=25990000;
+		double gia6=22999000;
+		double gia7=13490000;
+		double gia6=22999000;
+		double giagiam=15;
+		ThongTinDT t1=new ThongTinDT("01", "Iphone 7 Plus 128Gb", gia1, "Full HD", "OLED, 5.8, Super Retina", "iOS 11", "Apple A11 Bionic 6 nhân", "7 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "128 GB", "4G","img/ip/iphone-7-plus-128gb-de-400x460.png", gia1, giamGia(giagiam, gia1));
+		ThongTinDT t2=new ThongTinDT("02", "Iphone 8 256Gb", gia2, "Full HD", "OLED, 5.8, Super Retina", "iOS 11", "Apple A11 Bionic 6 nhân", "7 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "256 GB", "4G","img/ip/iphone-8-256gb-h4-1-400x460.png", gia2, giamGia(giagiam, gia2));
+		ThongTinDT t3=new ThongTinDT("03", "Iphone 8 Plus 256Gb", gia3, "Full HD", "OLED, 5.8, Super Retina", "iOS 11", "Apple A11 Bionic 6 nhân", "7 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "256 GB", "4G","img/ip/iphone-8-plus-256gb2-400x460-1-400x460.png", gia3, giamGia(giagiam, gia3));
+		ThongTinDT t4=new ThongTinDT("04", "Iphone 8 Plus 64Gb", gia4, "Full HD", "OLED, 5.8, Super Retina", "iOS 11", "Apple A11 Bionic 6 nhân", "	7 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "64 GB", "4G","img/ip/iphone-8-plus-64gb-h1-400x460.png", gia4, giamGia(giagiam, gia4));
+		ThongTinDT t5=new ThongTinDT("05", "Iphone X 256Gb", gia5, "Full HD", "OLED, 5.8, Super Retina", "iOS 11", "Apple A11 Bionic 6 nhân", "7 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "256 GB", "4G","img/ip/iphone-x-256gb-h2-400x460.png", gia5, giamGia(giagiam, gia5));
+		ThongTinDT t6=new ThongTinDT("06", "Iphone X 64 Gb", gia6, "Full HD", "OLED, 5.8, Super Retina", "iOS 11", "Apple A11 Bionic 6 nhân", "7 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "64 GB", "4G","img/ip/iphone-x-64gb-h1-400x460-400x460.png", gia6, giamGia(giagiam, gia6));
+		ThongTinDT t7=new ThongTinDT("07", "Sam Sung Galaxy A8 Plus 2018", gia7, "Full HD", "Super AMOLED 6", "	Android 7.1", "Exynos 7885 8 nhân 64-bit", "8 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "64 GB", "4G","img/ip/iphone-x-64gb-h1-400x460-400x460.png", gia6, giamGia(giagiam, gia6));
+		ThongTinDT t8=new ThongTinDT("06", "Iphone X 64 Gb", gia6, "Full HD", "OLED, 5.8, Super Retina", "iOS 11", "Apple A11 Bionic 6 nhân", "7 MP", "12 MP", "2716 mAh", "1 Nano SIM, Hỗ trợ 4G", "64 GB", "4G","img/ip/iphone-x-64gb-h1-400x460-400x460.png", gia6, giamGia(giagiam, gia6));
+		 if(all.size()==0){
+			all.add(t1);all.add(t2);all.add(t3);all.add(t4);all.add(t5);all.add(t6);
+		}
+		 return all;
+	}
+	
+//		super();
+//		//conn=DataBaseConnection.getConnection();
+//		//themDT();
+	
+//	public void themDT(){
+//		
+//		String searchQuery;
+//		array=new ArrayList<>();
+//		try {
+//		//	stmt=conn.createStatement();
+//			searchQuery="select t.TenSanPham,t.GiaSanPham,t.ManHinhRong,t.CongNgheManHinh,t.HeDieuHanh,t.TocDoCPU,t.CameraTruoc,t.Selfie,t.DungLuongPin,t.Sim,t.HinhANhSanPham,t.Rom,t.Ram FROM ThongTinSanPham t where t.tensanpham like 'iphone%' or t.tensanpham like 'samsung%' or t.tensanpham like 'sony%'";
+//			rs=stmt.executeQuery(searchQuery);
+//			while(rs.next()){
+//				ThongTinDT t=new ThongTinDT(rs.getString(1), rs.getInt(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13));
+//				array.add(t);
+//			}
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+	public static double giamGia(double phantram,double gia){
+		double result=gia*(1-((double)(phantram/100)));
+		return result;
+	}
+}
+

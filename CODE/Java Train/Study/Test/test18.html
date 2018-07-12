@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (ev) {
+            var text = document.getElementById("2");
+            var err=document.getElementById("loi2");
+            var form = document.getElementById("form");
+
+            form.onsubmit = function (ev1) {
+                if (text.value == null || text.value == "") {
+                    err.innerHTML="Bạn hãy nhập thông tin!";
+                    text.style.border= "1px solid red";
+                    return false;
+                } else {
+                    return true;
+                }
+
+            };
+            text.onkeyup=function (ev1) {
+                if(text.value != null || text.value!=""){
+                    err.innerText="";
+                    text.style.border= "2px solid green";
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form id="form" action="dkthanhcong.html">
+    <input id="2" type="text" value="">
+    <p style="color: red" id="loi2"></p>
+    <input id="1" type="submit" value="Nút Bấm">
+
+</form>
+
+</body>
+</html>

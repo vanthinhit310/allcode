@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (ev) {
+            var soA = document.getElementById('1');
+            var soB = document.getElementById('2');
+            var kq = document.getElementById('ketqua');
+            var nut = document.getElementById('nut');
+            var select = document.getElementById('pheptinh');
+
+            nut.onclick = function (ev1) {
+
+                if (select.value === '+') {
+                    kq.innerHTML = parseInt(soA.value) + parseInt(soB.value);
+                }
+                if (select.value === '-') {
+                    kq.innerHTML = parseInt(soA.value) - parseInt(soB.value);
+                }
+                if (select.value === '*') {
+                    kq.innerHTML = parseInt(soA.value) * parseInt(soB.value);
+                }
+                if (select.value === '/') {
+                    kq.innerHTML = parseInt(soA.value) / parseInt(soB.value);
+                }
+            };
+
+
+        }
+    </script>
+</head>
+<body>
+<div style="border: aqua" align="center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Máy Tính Điện Tử</h1>
+    <input type="text" id="1" placeholder="Số A">
+
+    <select id="pheptinh">
+        <option value="+">Cộng</option>
+        <option value="-">Trừ</option>
+        <option value="*">Nhân</option>
+        <option value="/">Chia</option>
+    </select>
+
+    <input type="text" id="2" placeholder="Số B">
+
+    <button id="nut" type="button">Kết quả</button>
+    <h1 id="ketqua" style="color: blue">0</h1>
+
+</div>
+</body>
+</html>

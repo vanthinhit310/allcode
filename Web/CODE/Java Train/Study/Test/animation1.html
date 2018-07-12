@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Animation</title>
+
+    <script type="text/javascript">
+        var imgObj = null;
+        var animate;
+
+        function init() {
+            imgObj = document.getElementById('myImage');
+            imgObj.style.position='relative';
+            imgObj.style.left = '0px';
+        }
+
+        function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 +'px';
+            animate = setTimeout(moveRight,300);
+        }
+
+        function stop() {
+            clearTimeout(animate);
+            imgObj.style.left= '0px';
+        }
+        window.onload = init;
+    </script>
+    <style>
+        #myImage {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<form>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <img id="myImage" src="../images/trankieuan.jpg"/>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h5>Click Start để bắt đầu di chuyển!</h5>
+    <input type="button" value="Start" onclick="moveRight();">
+    <input type="button" value="Stop" onclick="stop(); ">
+</form>
+
+</body>
+</html>

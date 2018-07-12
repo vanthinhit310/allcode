@@ -1,0 +1,482 @@
+<%--suppress XmlDuplicatedId --%>
+<%--
+  Created by IntelliJ IDEA.
+  User: vanth
+  Date: 3/29/2018
+  Time: 10:21 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lê Văn Thịnh Blog</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style type="text/css">
+        #name {
+        }
+    </style>
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Header -->
+<header id="header">
+
+    <div class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="intro-text">
+                    <h1>Xin chào - Tôi là <span class="name">THỊNH</span></h1>
+                    <p>Graphic Designer & Web Developer</p>
+                    <a href="#about" class="btn btn-default btn-lg page-scroll">Xem thêm về tôi</a></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<jsp:include page="menu.jsp"></jsp:include>
+
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="section-title text-center center">
+            <h2>Bản thân</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center"><img src="img/about.jpg" class="img-responsive"></div>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="about-text">
+                    <p>Tôi sinh ra và lớn lên ở một vùng quê đầy nắng và gió. Tôi vào Sài Gòn với mục đích bản thân mình
+                        có thể và chạm với cuộc sống nhiều hơn để biết được rằng mình có thể mạnh mẽ đến đâu.
+                        Tôi thích sự tự do và ghét bỏ sự ràng buộc, khuôn khổ. Châm ngôn sống của tôi là: </p>
+                    <p class="chamngon"><span>CUỘC SỐNG VỐN KHÔNG CÔNG BẰNG - BẠN HÃY TẬP QUEN DẦN VỚI ĐIỀU ĐÓ!</span>
+                    </p>
+                    <p>Những người sống tự do, chính là những người muốn thoải mái làm theo những gì mình thích, kể cả
+                        điều đó là điên rồ hay không tưởng, kể cả điều đó là điều khiến người khác cười chê. Không để ý
+                        đến qua điểm đám đông, không hùa theo những trào lưu kỳ cục, không chịu biến mình thành ai khác,
+                        thậm chí là thích thử thách giữa một thế giới rộng lớn mà không cần ai phải đứng cùng một chiến
+                        tuyến với mình. Những người sống tự do chính là những người có thể thoải mái cười dưới bầu trời
+                        rộng lớn, có thể thoải mái khóc khi thất bại để rồi lại đứng lên ngay được sau khi đã cảm thấy
+                        đã đau đủ cho vết thương trong quá khứ.</p>
+                    <p class="text-center"><a class="btn btn-primary" href="#"><i class="fa fa-download"></i> Dowload My
+                        CV</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Skills Section -->
+<div id="skills" class="text-center">
+    <div class="container">
+        <div class="section-title center">
+            <h2>Kĩ năng cá nhân</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="95"> <span class="percent">85</span> </span>
+                <h4>HTML5</h4>
+            </div>
+            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="85"> <span class="percent">80</span> </span>
+                <h4>CSS3</h4>
+            </div>
+            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="80"> <span class="percent">90</span> </span>
+                <h4>After Effect</h4>
+            </div>
+            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="80"> <span class="percent">80</span> </span>
+                <h4>Premier</h4>
+            </div>
+            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="70"> <span class="percent">85</span> </span>
+                <h4>Photoshop</h4>
+            </div>
+            <div class="col-md-4 col-sm-6 skill"><span class="chart" data-percent="65"> <span class="percent">65</span> </span>
+                <h4>Java</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="container">
+        <div class="section-title text-center center">
+            <h2>Project</h2>
+            <hr>
+        </div>
+        <div class="categories">
+            <ul class="cat">
+                <li>
+                    <ol class="type">
+                        <li><a href="#" data-filter="*" class="active">Tất cả</a></li>
+                        <li><a href="#" data-filter=".web">Java Web</a></li>
+                        <li><a href="#" data-filter=".app">Photoshop</a></li>
+                        <li><a href="#" data-filter=".branding">After Effect</a></li>
+                    </ol>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <div class="portfolio-items">
+                <div class="col-sm-6 col-md-3 col-lg-3 web">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="img/portfolio/01-large.jpg" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 1</h4>
+                                <small>Web Design</small>
+                            </div>
+                            <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 app">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="#login" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 2</h4>
+                                <small>Photoshop</small>
+                            </div>
+                            <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 web">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="img/portfolio/03-large.jpg" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 3</h4>
+                                <small>Web Design</small>
+                            </div>
+                            <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 web">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="img/portfolio/04-large.jpg" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 4</h4>
+                                <small>Web Design</small>
+                            </div>
+                            <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 app">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="img/portfolio/05-large.jpg" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 5</h4>
+                                <small>Photoshop</small>
+                            </div>
+                            <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 branding">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="img/portfolio/06-large.jpg" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 6</h4>
+                                <small>After Effect</small>
+                            </div>
+                            <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 branding app">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="img/portfolio/07-large.jpg" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 7</h4>
+                                <small>Photoshop , After Effect</small>
+                            </div>
+                            <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3 web">
+                    <div class="portfolio-item">
+                        <div class="hover-bg"><a href="img/portfolio/08-large.jpg" title="Project description"
+                                                 rel="prettyPhoto">
+                            <div class="hover-text">
+                                <h4>Project 8</h4>
+                                <small>Web Design</small>
+                            </div>
+                            <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Achievements Section -->
+<div id="achievements" class="text-center">
+    <div class="container">
+        <div class="section-title center">
+            <h2>Thống kê bản thân</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="200ms">
+                <div class="achievement-box"><span class="count">15</span>
+                    <h4>Khách hàng hài lòng</h4>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="400ms">
+                <div class="achievement-box"><span class="count">1500</span>
+                    <h4>Số giờ làm việc</h4>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="600ms">
+                <div class="achievement-box"><span class="count">1</span>
+                    <h4>Giải thưởng</h4>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay="800ms">
+                <div class="achievement-box"><span class="count">21</span>
+                    <h4>Số năm kinh nghiệm</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Resume Section -->
+<div id="resume" class="text-center">
+    <div class="container">
+        <div class="section-title center">
+            <h2>Education</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <h4>2001 <br>
+                                - <br>
+                                2005 </h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Tân Phúc 2</h4>
+                                <h4 class="subheading">Học sinh tiểu học</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Học tiểu học tại trường tiểu học Tân Phúc 2 xã Tân Phúc - Hàm Tân - Bình Thuận.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4> 2006 <br>
+                                - <br>
+                                2010 </h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Tân Minh</h4>
+                                <h4 class="subheading">Học sinh THCS</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Theo học THCS tại trường THCS Tân Minh - Kp2 - TT Tân Minh - Hàm Tân - Bình
+                                    Thuận.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <h4>2011 <br>
+                                - <br>
+                                2014 </h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>THPT Đức Tân</h4>
+                                <h4 class="subheading">Học sinh THPT</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Theo học chương trình THPT tại trường THPT Đức Tân - Kp2 - TT Tân Minh - Hàm Tân -
+                                    Bình Thuận.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section-title center">
+            <h2>Experience</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+
+                    <!-- Education Section-->
+
+                    <li>
+                        <div class="timeline-image">
+                            <h4>2014<br>
+                                - <br>
+                                2015 </h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Công ty xây dựng</h4>
+                                <h4 class="subheading">Phụ hồ</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Từng đi phụ hồ cho công ty xây dựng. Bản thân thành thạo các công việc như trộn hồ -
+                                    xách vữa , gạch đá. Có thể làm việc trong điều kiện khắc nghiệt =)).</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>2015 <br>
+                                - <br>
+                                2016 </h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Công ty TNHH thu gom xử lí rác thải</h4>
+                                <h4 class="subheading">Nhân viên móc bọc</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Sau khi đi phụ hồ được gần một năm thì cảm thấy mình không phù hợp với công việc đó
+                                    nữa. Nên đã chuyển sang làm nhân viên móc bọc cho công ty rác. Đã từng lụm rất nhiều
+                                    ve chai - kinh nghiệm đầy mình trong lĩnh vực này :).</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <h4>2016 <br>
+                                - <br>
+                                Đến nay </h4>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Đội tuyển LMHT SKT T1</h4>
+                                <h4 class="subheading">Tuyển thủ đi MID</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Nguyên một năm lụm ve chai để kiếm tiền chơi net thì trình độ liên
+                                    minh đã cải thiện vượt bậc đạt trình độ thượng thừa. Nên đã được Kkoma mua về thay
+                                    thế Faker!</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+    <div class="container">
+        <div class="section-title center">
+            <h2>Contact</h2>
+            <hr>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-4"><i class="fa fa-map-marker fa-2x"></i>
+                <p>Trường DH Nông Lâm HCM - <br>
+                    Khu phố 6 - Linh Trung - TĐ - HCM City</p>
+            </div>
+            <div class="col-md-4"><i class="fa fa-envelope-o fa-2x"></i>
+                <p>vanthinhit310@gmail.com</p>
+            </div>
+            <div class="col-md-4"><i class="fa fa-phone fa-2x"></i>
+                <p> +84 982 650 542</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Message</h3>
+            <form name="sentMessage" id="contactForm" novalidate>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message"
+                              required></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div id="success"></div>
+                <button type="submit" class="btn btn-default">Send Message</button>
+            </form>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/vanthinh.le.50364"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC0aTobr4p2SKbgzGc1x1BCA?view_as=subscriber"><i
+                            class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="login" style="background: #d8d8d8" class="text-center">
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Login</h3>
+            <form name="sentMessage" id="contactForm" novalidate>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-control" placeholder="Username">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" id="password" class="form-control" placeholder="Password">
+                            <p class="help-block text-danger"></p>
+                            <a class="col-md-3" href="signup.jsp">Đăng kí</a>
+                            <div class="col-md-4"></div>
+                            <a class="col-md-5" href="resetpass.jsp">Quên mật khẩu?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="success"></div>
+                <button type="button" id="btn-login" class="btn btn-primary">Đăng nhập</button>
+            </form>
+            <br>
+        </div>
+    </div>
+    <jsp:include page="footer.jsp"></jsp:include>
+</div>
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script>
+<script type="text/javascript" src="js/easypiechart.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/jquery.counterup.js"></script>
+<script type="text/javascript" src="js/waypoints.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
